@@ -30,12 +30,10 @@ public class MortgageCalculator {
 	    int numberPayments = 0;
 	
 	    do {
-	        //grab input from user - Can be other than String bbbss
 	        System.out.print("Please enter your Annual Interest Rate (0-30): ");
 	        enteredInterest = scanner.nextFloat();
 	        interestAnnual = enteredInterest / PERCENT;
 	        interestMonthly = interestAnnual / MONTHS_IN_YEAR;
-	        // System.out.println(interestAnnual);
 	    }
 	    while ((enteredInterest < 0) || (enteredInterest > 30));
 	
@@ -48,6 +46,7 @@ public class MortgageCalculator {
 	    }
 	    while ((years < 0) || (years > 40));
 	
+		scanner.close();
 	
 	        /*
 	Make NEW currency class instance -
